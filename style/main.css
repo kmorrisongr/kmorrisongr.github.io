@@ -22,16 +22,12 @@ h2 {
 	text-decoration: underline;
 }
 
-ul {
-	text-align: center;
-}
-
 .row {
 	display: flex;
 }
 
 .column {
-	flex: 50%;
+	flex: 33%;
 }
 
 .sections {
@@ -43,4 +39,9 @@ ul {
 
 .seccol {
 	flex: 20%;
+}
+
+.headshot {
+	width: 50%;
+	height: auto;
 }

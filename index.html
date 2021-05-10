@@ -10,11 +10,14 @@
 	</head>
 	<body bgcolor="#12161C", text="#E1D9C7">
 		<div class="row">
+			<div class="column" style="margin-right: -17.5%;">
+				<img class="headshot" src="img/headshot.jpg">
+			</div>
 			<div class="column">
 				<h1 align=>Kyle Morrison</h1>
 				<p>
 				<a href="mailto:ksmorrison@wpi.edu">ksmorrison@wpi.edu</a> <br>
-				Bench scientist gone to the data science side.
+				Bench scientist turned data scientist.
 				</p>
 			</div>
 			<div class="column">
@@ -30,7 +33,15 @@
 
 		<div class="sections">
 			<div class="seccol">
-				<h2>Research</h2>
+				<h2> <label for="collapse_research">Research</label></h2>
+				<input type="checkbox" id="collapse_research", style="display:none;">
+				<div id="hidden">
+					<h3> <label for="collapse_thesis">Foundations for Improved Vaccine Efficacy Trial Analysis Using Positive-Unlabeled Learning</label></h3>
+					<input type="checkbox" id="collapse_thesis" style="display:none;">
+					<div id="hidden">
+						meep
+					</div>
+				</div>
 			</div>
 
 			<div class="seccol">
@@ -54,6 +65,24 @@
 			If things like dwm-ipc scare the hell out of you because they're so big, this window manager might be for you. You want a window manager that works like a souped-up dwm with sane defaults that is also opinionated like all the cool kids. I think the combination of the tag system, the flexibility of sxhkd and IPC interaction, and the ease of parsing the window manager's internal state are good selling points.
 						</p>
 					</div>
+
+					<h3> <label for="collapse_peachbar">peachbar (discontinued)</label></h3>
+					<input type="checkbox" id="collapse_peachbar" style="display:none;">
+					<div id="hidden">
+						<p>
+						<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
+						</p>
+						<p>
+						In its first incarnation as <a href="https://github.com/gitluin/sbar">sbar</a>, it was a collection of separate .sh files that atomically (using mkdir) wrote information to a file that contains the pre-formatted string to be written to the X server's root window name. This string was then displayed using sara's internal status bar, à la dwm.
+						</p>
+						<p>
+						As my interest in Unix philosophy grew, I started reducing the complexity of sara, which had become my daily-driver window manager. This included removing the built-in status bar, which facilitated a migration to lemonbar. The next iteration of the bar scripts then became sbar-lemon, which wrote text to a FIFO, which was then aggregated and sent to lemonbar.
+						</p>
+						<p>
+						However, the setup lacked flexibility. My final version, which became peachbar, was aimed at extreme modularity and asynchronous performance. My goal was to use only shell scripts. After much work, however, it became apparent that shell is not the ideal tool for some tasks, and I became intimately familiar with Not-Invented-Here syndrome. Once I discovered that the very powerful and flexible <a href="https://github.com/polybar/polybar">polybar</a> supports lemonbar-formatted strings, I realized I had a quick way to integrate my custom window manager with a pre-existing, very useful tool, and jumped ship.
+						</p>
+					</div>
+				</div>
 			</div>
 
 			<div class="seccol">
@@ -71,24 +100,16 @@
 			</div>
 
 			<div class="seccol">
-				<h2> <label for="collapse_defunct">Defunct Projects</label></h2>
-				<input type="checkbox" id="collapse_defunct", style="display:none;">
+				<h2> <label for="collapse_like">Things I Like</label></h2>
+				<input type="checkbox" id="collapse_like", style="display:none;">
 				<div id="hidden">
-					<h3> <label for="collapse_peachbar">peachbar</label></h3>
-					<input type="checkbox" id="collapse_peachbar" style="display:none;">
-					<div id="hidden">
-						<p>
-						<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
-						</p>
-						<p>
-						In its first incarnation as <a href="https://github.com/gitluin/sbar">sbar</a>, it was a collection of separate .sh files that atomically (using mkdir) wrote information to a file that contains the pre-formatted string to be written to the X server's root window name. This string was then displayed using sara's internal status bar, à la dwm.
-						</p>
-						<p>
-						As my interest in Unix philosophy grew, I started reducing the complexity of sara, which had become my daily-driver window manager. This included removing the built-in status bar, which facilitated a migration to lemonbar. The next iteration of the bar scripts then became sbar-lemon, which wrote text to a FIFO, which was then aggregated and sent to lemonbar.
-						</p>
-						<p>
-						However, the setup lacked flexibility. My final version, which became peachbar, was aimed at extreme modularity and asynchronous performance. My goal was to use only shell scripts. After much work, however, it became apparent that shell is not the ideal tool for some tasks, and I became intimately familiar with Not-Invented-Here syndrome. Once I discovered that the very powerful and flexible <a href="https://github.com/polybar/polybar">polybar</a> supports lemonbar-formatted strings, I realized I had a quick way to integrate my custom window manager with a pre-existing, very useful tool, and jumped ship.
-						</p>
+					<ul>
+						<li>neovim</li>
+						<li>tmux</li>
+						<li>Tiling window managers (quelle surprise!)</li>
+						<li>Running</li>
+						<li>Lots of music. Tycho is the flavor of the month.</li>
+					</ul>
 				</div>
 			</div>
 		</div>
