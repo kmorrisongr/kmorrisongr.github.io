@@ -1,1 +1,64 @@
-Hellow world
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		@import url(style/main.css);
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kyle Morrison's Website</title>
+	</head>
+	<body bgcolor="#12161C", text="#E1D9C7">
+		<h1 align="center">Kyle Morrison</h1>
+			<p align="center">
+			<i>
+			MSc in Microbiology &amp; Immunology, Dartmouth College <br>
+			BSc in Biochemistry, Worcester Polytechnic Institute <br>
+			</i>
+			</p>
+
+		<h2 align="center">Research Experience</h2>
+
+		<h2 align="center">Project Experience</h2>
+
+		<h2 align="center">Open Source Experience</h2>
+
+		<h3 align="center"> <label for="collapse_sara">sara Window Manager</label></h3>
+		<input type="checkbox" id="collapse_sara" style="display:none;">
+		<div id="hidden">
+			<p align="center">
+			From the project <a href="https://github.com/gitluin/sara#readme">README:</a>
+			</p>
+			<p align="center">
+			sara is a simple and lightweight dynamic window manager. What started out as an attempt to make catwm into a small and fully-functional window manager has turned into my primary project in C. At the moment, sara combines aspects of dwm and bspwm with some custom features. As my needs/wants change, so too will the program, and probably how much you like it.
+			</p>
+			<p align="center">
+If things like dwm-ipc scare the hell out of you because they're so big, this window manager might be for you. You want a window manager that works like a souped-up dwm with sane defaults that is also opinionated like all the cool kids. I think the combination of the tag system, the flexibility of sxhkd and IPC interaction, and the ease of parsing the window manager's internal state are good selling points.
+			</p>
+		</div>
+
+			<h3 align="center">Defunct Projects</h3>
+			<h4 align="center"> <label for="collapse_peachbar">peachbar</label></h4>
+			<input type="checkbox" id="collapse_peachbar" style="display:none;">
+			<div id="hidden">
+			<p align="center">
+			<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
+			</p>
+			<p align="center">
+			In its first incarnation as <a href="https://github.com/gitluin/sbar">sbar</a>, it was a collection of separate .sh files that atomically (using mkdir) wrote information to a file that contains the pre-formatted string to be written to the X server's root window name. This string was then displayed using sara's internal status bar, à la dwm.
+			</p>
+			<p align="center">
+			As my interest in Unix philosophy grew, I started reducing the complexity of sara, which had become my daily-driver window manager. This included removing the built-in status bar, which facilitated a migration to lemonbar. The next iteration of the bar scripts then became sbar-lemon, which wrote text to a FIFO, which was then aggregated and sent to lemonbar.
+			</p>
+			<p align="center">
+			However, the setup lacked flexibility. My final version, which became peachbar, was aimed at extreme modularity and asynchronous performance. My goal was to remain solely within shell scripts. After much work, however, it became apparent that sh is not the ideal tool for some tasks, and I became intimately familiar with Not-Invented-Here syndrome. Once I discovered that the very powerful and flexible <a href="https://github.com/polybar/polybar">polybar</a> supports lemonbar-formatted strings, I realized I had a quick way to integrate my custom window manager with a pre-existing, very useful tool, and jumped ship.
+			</p>
+		</div>
+
+		<h2 align="center">Hobby Projects</h2>
+			<h3 align="center">Minecraft Server</h3>
+			<p align="center">
+			I manage a Minecraft server that I run from a Raspberry Pi 4 (2GB) using <a href="https://papermc.io/">Paper</a>. Before I learned that Minecraft Java Edition isn't multithreaded, I set up a small Kubernetes (k3s) cluster to parallelize this, gaining some experience with <a href="https://github.com/alexellis/k3sup">k3sup</a> and helm.
+			</p>
+	</body>
+</html>
