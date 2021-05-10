@@ -1,0 +1,14 @@
+a {
+	color: #A08F71;
+}
+
+#hidden {
+	display: none;
+}
+:checked + #hidden {
+	display: block;
+}
+
+label[for*="collapse"]{
+	cursor: pointer;
+}
