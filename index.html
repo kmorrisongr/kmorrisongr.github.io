@@ -10,9 +10,6 @@
 	</head>
 	<body bgcolor="#12161C", text="#E1D9C7">
 		<div class="row">
-			<div class="column" style="margin-right: -17.5%;">
-				<img class="headshot" src="img/headshot.jpg">
-			</div>
 			<div class="column">
 				<h1 align=>Kyle Morrison</h1>
 				<p>
@@ -31,22 +28,48 @@
 
 		</div>
 
-		<!-- TOPICS AND SUBJECTS -->
-		<div class="sections">
-			<div class="seccol">
+
+		<!-- TOPICS -->
+		<div class="topics">
+			<div class="topcol">
 				<h2> <label for="collapse_research">Research</label></h2>
+			</div>
+
+			<div class="topcol">
+				<h2> <label for="collapse_projects">Projects</label></h2>
+			</div>
+
+			<div class="topcol">
+				<h2> <label for="collapse_open_source">Open Source</label></h2>
+			</div>
+
+			<div class="topcol">
+				<h2> <label for="collapse_hobby">Hobby Projects</label></h2>
+			</div>
+
+			<div class="topcol">
+				<h2> <label for="collapse_etc">etc/</label></h2>
+			</div>
+		</div>
+
+
+		<!-- SUBJECTS -->
+		<div class="subjects">
+			<div class="subcol">
 				<input type="checkbox" id="collapse_research", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_thesis">Foundations for Improved Vaccine Efficacy Trial Analysis Using Positive-Unlabeled Learning</label></h3>
 				</div>
 			</div>
 
-			<div class="seccol">
-				<h2>Projects</h2>
+			<div class="subcol">
+				<input type="checkbox" id="collapse_projects", style="display:none;">
+				<div id="hidden">
+					<h3> <label for="collapse_iqp">Photographic Documentation of the Cromwell Brook Watershed</label></h3>
+				</div>
 			</div>
 
-			<div class="seccol">
-				<h2> <label for="collapse_open_source">Open Source</label></h2>
+			<div class="subcol">
 				<input type="checkbox" id="collapse_open_source", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_sara">sara Window Manager</label></h3>
@@ -55,20 +78,24 @@
 				</div>
 			</div>
 
-			<div class="seccol">
-				<h2> <label for="collapse_hobby">Hobby Projects</label></h2>
+			<div class="subcol">
 				<input type="checkbox" id="collapse_hobby", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_minecraft">Minecraft Server</label></h3>
 				</div>
 			</div>
 
-			<div class="seccol">
-				<h2> <label for="collapse_like">Things I Like</label></h2>
+			<div class="subcol">
+				<input type="checkbox" id="collapse_etc", style="display:none;">
+				<div id="hidden">
+					<h3> <label for="collapse_like">Things I Like</label></h3>
+				</div>
 			</div>
 		</div>
 
-		<!-- TODO: fixed width, not whole screen? -->
+
+
+		<!-- TODO: Only show one content box at a time -->
 
 		<!-- CONTENT -->
 
@@ -76,17 +103,25 @@
 		<!-- RESEARCH -->
 		<!-- THESIS -->
 		<input type="checkbox" id="collapse_thesis" style="display:none;">
-		<div id="hidden">
-			Vaccine efficacy trials, specifically those evaluating potential HIV vaccines, are an enormous investment of human, intellectual, and economic resources. Despite this, HIV has continued to prove a difficult virus to tacklem with only the RV144 trial showing a vaccine regimen can produce a significant protective effect. If we could get more out of the studies that are performed, perhaps our progress towards a preventative for HIV could be hastened, our investments and time better taken advantage of. <br>
-			To this end, I sought to evaluate the potential for a new class of machine learning methods, Positive-Unlabeled learning, in the context of vaccine efficacy trials. I developed an R API for testing machine learning methods on simulated immunological data, which allows the user to define parameters in an "experiment" .R file and let the backend do the evaluating and result aggregating. Support for cross-validation, multiple test metrics, and much more was implemented. The codebase was also built to be as modular as possible, allowing the user to add their own ML implementations and compare them side-by-side with the defaults. Infrastructure was also put in place to automate plotting of results. <br>
-			Currently, public access to this work is embargoed to give whoever follows in my footsteps in my previous research group a change to spin up and get something out the door. Wouldn't want to get scooped!
+		<div class="content" id="hidden">
+			Vaccine efficacy trials, specifically those evaluating potential HIV vaccines, are an enormous investment of human, intellectual, and economic resources. Despite this, HIV has continued to prove a difficult virus to tacklem with only the RV144 trial showing a vaccine regimen can produce a significant protective effect. If we could get more out of the studies that are performed, perhaps our progress towards a preventative for HIV could be hastened, our investments and time better taken advantage of. <br><br>
+			To this end, I sought to evaluate the potential for a new class of machine learning methods, Positive-Unlabeled learning, in the context of vaccine efficacy trials. I developed an R API for testing machine learning methods on simulated immunological data, which allows the user to define parameters in an "experiment" .R file and let the backend do the evaluating and result aggregating. Support for cross-validation, multiple test metrics, and much more was implemented. The codebase was also built to be as modular as possible, allowing the user to add their own ML implementations and compare them side-by-side with the defaults. Infrastructure was also put in place to automate plotting of results. <br><br>
+			Currently, public access to this work is embargoed to allow my previous research group time to get a publication out the door.
+		</div>
+
+
+		<!-- PROJECTS -->
+		<!-- IQP -->
+		<input type="checkbox" id="collapse_iqp" style="display:none;">
+		<div class="content" id="hidden">
+			Meow
 		</div>
 
 
 		<!-- OPEN SOURCE -->
 		<!-- SARA WM -->
 		<input type="checkbox" id="collapse_sara" style="display:none;">
-		<div id="hidden">
+		<div class="content" id="hidden">
 			<p>
 			From the project <a href="https://github.com/gitluin/sara#readme">README:</a>
 			</p>
@@ -100,7 +135,7 @@ If things like dwm-ipc scare the hell out of you because they're so big, this wi
 
 		<!-- PEACHBAR -->
 		<input type="checkbox" id="collapse_peachbar" style="display:none;">
-		<div id="hidden">
+		<div class="content" id="hidden">
 			<p>
 			<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
 			</p>
@@ -118,7 +153,7 @@ If things like dwm-ipc scare the hell out of you because they're so big, this wi
 
 		<!-- HOBBY PROJECTS -->
 		<input type="checkbox" id="collapse_minecraft" style="display:none;">
-		<div id="hidden">
+		<div class="content" id="hidden">
 			<p>
 			I manage a Minecraft server that I run from a Raspberry Pi 4 (2GB) using <a href="https://papermc.io/">Paper</a>. Before I learned that Minecraft Java Edition isn't multithreaded, I set up a small Kubernetes (k3s) cluster to parallelize this, gaining some experience with <a href="https://github.com/alexellis/k3sup">k3sup</a> and helm.
 			</p>
@@ -127,12 +162,13 @@ If things like dwm-ipc scare the hell out of you because they're so big, this wi
 
 		<!-- THINGS I LIKE -->
 		<input type="checkbox" id="collapse_like", style="display:none;">
-		<div id="hidden">
-			neovim<br>
+		<div class="content" id="hidden">
+			neovim, a lot.<br>
 			tmux<br>
 			Tiling window managers<br>
+			<a href="https://www.reddit.com/r/unixporn/comments/hpakeu">EmpressNoodle's Iosevka</a><br>
 			Running<br>
-			Most kinds of music. Currently listing to a lot of Lo-Fi and Tycho.<br>
+			Most kinds of music, but currently listing to a lot of Lo-Fi and Tycho.<br>
 		</div>
 	</body>
 </html>

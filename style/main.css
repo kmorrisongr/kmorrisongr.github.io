@@ -27,21 +27,33 @@ h2 {
 }
 
 .column {
-	flex: 33%;
+	flex: 50%;
 }
 
-.sections {
+.topics {
 	display: flex;
 	justify-content: space-between;
 	align-items: left;
 	flex-direction: row;
 }
 
-.seccol {
+.subjects {
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+	flex-direction: row;
+}
+
+/* TODO: align with .topics text */
+.subcol {
 	flex: 20%;
 }
 
 .headshot {
 	width: 50%;
 	height: auto;
+}
+
+.content {
+	width: 66%;
 }
