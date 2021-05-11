@@ -31,16 +31,13 @@
 
 		</div>
 
+		<!-- TOPICS AND SUBJECTS -->
 		<div class="sections">
 			<div class="seccol">
 				<h2> <label for="collapse_research">Research</label></h2>
 				<input type="checkbox" id="collapse_research", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_thesis">Foundations for Improved Vaccine Efficacy Trial Analysis Using Positive-Unlabeled Learning</label></h3>
-					<input type="checkbox" id="collapse_thesis" style="display:none;">
-					<div id="hidden">
-						meep
-					</div>
 				</div>
 			</div>
 
@@ -53,35 +50,8 @@
 				<input type="checkbox" id="collapse_open_source", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_sara">sara Window Manager</label></h3>
-					<input type="checkbox" id="collapse_sara" style="display:none;">
-					<div id="hidden">
-						<p>
-						From the project <a href="https://github.com/gitluin/sara#readme">README:</a>
-						</p>
-						<p>
-						sara is a simple and lightweight dynamic window manager. What started out as an attempt to make catwm into a small and fully-functional window manager has turned into my primary project in C. At the moment, sara combines aspects of dwm and bspwm with some custom features. As my needs/wants change, so too will the program, and probably how much you like it.
-						</p>
-						<p>
-			If things like dwm-ipc scare the hell out of you because they're so big, this window manager might be for you. You want a window manager that works like a souped-up dwm with sane defaults that is also opinionated like all the cool kids. I think the combination of the tag system, the flexibility of sxhkd and IPC interaction, and the ease of parsing the window manager's internal state are good selling points.
-						</p>
-					</div>
 
 					<h3> <label for="collapse_peachbar">peachbar (discontinued)</label></h3>
-					<input type="checkbox" id="collapse_peachbar" style="display:none;">
-					<div id="hidden">
-						<p>
-						<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
-						</p>
-						<p>
-						In its first incarnation as <a href="https://github.com/gitluin/sbar">sbar</a>, it was a collection of separate .sh files that atomically (using mkdir) wrote information to a file that contains the pre-formatted string to be written to the X server's root window name. This string was then displayed using sara's internal status bar, à la dwm.
-						</p>
-						<p>
-						As my interest in Unix philosophy grew, I started reducing the complexity of sara, which had become my daily-driver window manager. This included removing the built-in status bar, which facilitated a migration to lemonbar. The next iteration of the bar scripts then became sbar-lemon, which wrote text to a FIFO, which was then aggregated and sent to lemonbar.
-						</p>
-						<p>
-						However, the setup lacked flexibility. My final version, which became peachbar, was aimed at extreme modularity and asynchronous performance. My goal was to use only shell scripts. After much work, however, it became apparent that shell is not the ideal tool for some tasks, and I became intimately familiar with Not-Invented-Here syndrome. Once I discovered that the very powerful and flexible <a href="https://github.com/polybar/polybar">polybar</a> supports lemonbar-formatted strings, I realized I had a quick way to integrate my custom window manager with a pre-existing, very useful tool, and jumped ship.
-						</p>
-					</div>
 				</div>
 			</div>
 
@@ -90,28 +60,79 @@
 				<input type="checkbox" id="collapse_hobby", style="display:none;">
 				<div id="hidden">
 					<h3> <label for="collapse_minecraft">Minecraft Server</label></h3>
-					<input type="checkbox" id="collapse_minecraft" style="display:none;">
-					<div id="hidden">
-						<p>
-						I manage a Minecraft server that I run from a Raspberry Pi 4 (2GB) using <a href="https://papermc.io/">Paper</a>. Before I learned that Minecraft Java Edition isn't multithreaded, I set up a small Kubernetes (k3s) cluster to parallelize this, gaining some experience with <a href="https://github.com/alexellis/k3sup">k3sup</a> and helm.
-						</p>
-					</div>
 				</div>
 			</div>
 
 			<div class="seccol">
 				<h2> <label for="collapse_like">Things I Like</label></h2>
-				<input type="checkbox" id="collapse_like", style="display:none;">
-				<div id="hidden">
-					<ul>
-						<li>neovim</li>
-						<li>tmux</li>
-						<li>Tiling window managers (quelle surprise!)</li>
-						<li>Running</li>
-						<li>Lots of music. Tycho is the flavor of the month.</li>
-					</ul>
-				</div>
 			</div>
+		</div>
+
+		<!-- TODO: fixed width, not whole screen? -->
+
+		<!-- CONTENT -->
+
+
+		<!-- RESEARCH -->
+		<!-- THESIS -->
+		<input type="checkbox" id="collapse_thesis" style="display:none;">
+		<div id="hidden">
+			Vaccine efficacy trials, specifically those evaluating potential HIV vaccines, are an enormous investment of human, intellectual, and economic resources. Despite this, HIV has continued to prove a difficult virus to tacklem with only the RV144 trial showing a vaccine regimen can produce a significant protective effect. If we could get more out of the studies that are performed, perhaps our progress towards a preventative for HIV could be hastened, our investments and time better taken advantage of. <br>
+			To this end, I sought to evaluate the potential for a new class of machine learning methods, Positive-Unlabeled learning, in the context of vaccine efficacy trials. I developed an R API for testing machine learning methods on simulated immunological data, which allows the user to define parameters in an "experiment" .R file and let the backend do the evaluating and result aggregating. Support for cross-validation, multiple test metrics, and much more was implemented. The codebase was also built to be as modular as possible, allowing the user to add their own ML implementations and compare them side-by-side with the defaults. Infrastructure was also put in place to automate plotting of results. <br>
+			Currently, public access to this work is embargoed to give whoever follows in my footsteps in my previous research group a change to spin up and get something out the door. Wouldn't want to get scooped!
+		</div>
+
+
+		<!-- OPEN SOURCE -->
+		<!-- SARA WM -->
+		<input type="checkbox" id="collapse_sara" style="display:none;">
+		<div id="hidden">
+			<p>
+			From the project <a href="https://github.com/gitluin/sara#readme">README:</a>
+			</p>
+			<p>
+			sara is a simple and lightweight dynamic window manager. What started out as an attempt to make catwm into a small and fully-functional window manager has turned into my primary project in C. At the moment, sara combines aspects of dwm and bspwm with some custom features. As my needs/wants change, so too will the program, and probably how much you like it.
+			</p>
+			<p>
+If things like dwm-ipc scare the hell out of you because they're so big, this window manager might be for you. You want a window manager that works like a souped-up dwm with sane defaults that is also opinionated like all the cool kids. I think the combination of the tag system, the flexibility of sxhkd and IPC interaction, and the ease of parsing the window manager's internal state are good selling points.
+			</p>
+		</div>
+
+		<!-- PEACHBAR -->
+		<input type="checkbox" id="collapse_peachbar" style="display:none;">
+		<div id="hidden">
+			<p>
+			<a href="https://github.com/gitluin/peachbar">peachbar</a> was a set of shell scripts to interface with <a href="https://github.com/LemonBoy/bar">lemonbar</a>, a program that displays text from standard output in a status bar window.
+			</p>
+			<p>
+			In its first incarnation as <a href="https://github.com/gitluin/sbar">sbar</a>, it was a collection of separate .sh files that atomically (using mkdir) wrote information to a file that contains the pre-formatted string to be written to the X server's root window name. This string was then displayed using sara's internal status bar, à la dwm.
+			</p>
+			<p>
+			As my interest in Unix philosophy grew, I started reducing the complexity of sara, which had become my daily-driver window manager. This included removing the built-in status bar, which facilitated a migration to lemonbar. The next iteration of the bar scripts then became sbar-lemon, which wrote text to a FIFO, which was then aggregated and sent to lemonbar.
+			</p>
+			<p>
+			However, the setup lacked flexibility. My final version, which became peachbar, was aimed at extreme modularity and asynchronous performance. My goal was to use only shell scripts. After much work, however, it became apparent that shell is not the ideal tool for some tasks, and I became intimately familiar with Not-Invented-Here syndrome. Once I discovered that the very powerful and flexible <a href="https://github.com/polybar/polybar">polybar</a> supports lemonbar-formatted strings, I realized I had a quick way to integrate my custom window manager with a pre-existing, very useful tool, and jumped ship.
+			</p>
+		</div>
+
+
+		<!-- HOBBY PROJECTS -->
+		<input type="checkbox" id="collapse_minecraft" style="display:none;">
+		<div id="hidden">
+			<p>
+			I manage a Minecraft server that I run from a Raspberry Pi 4 (2GB) using <a href="https://papermc.io/">Paper</a>. Before I learned that Minecraft Java Edition isn't multithreaded, I set up a small Kubernetes (k3s) cluster to parallelize this, gaining some experience with <a href="https://github.com/alexellis/k3sup">k3sup</a> and helm.
+			</p>
+		</div>
+
+
+		<!-- THINGS I LIKE -->
+		<input type="checkbox" id="collapse_like", style="display:none;">
+		<div id="hidden">
+			neovim<br>
+			tmux<br>
+			Tiling window managers<br>
+			Running<br>
+			Most kinds of music. Currently listing to a lot of Lo-Fi and Tycho.<br>
 		</div>
 	</body>
 </html>
