@@ -5,6 +5,7 @@ a {
 #hidden {
 	display: none;
 }
+
 :checked + #hidden {
 	display: block;
 }
@@ -30,11 +31,16 @@ h2 {
 	flex: 50%;
 }
 
+/* TODO: spacing is still lame on smaller browser views */
 .topics {
 	display: flex;
 	justify-content: space-between;
 	align-items: left;
 	flex-direction: row;
+}
+
+.topcol {
+	flex: 20%;
 }
 
 .subjects {
@@ -44,7 +50,6 @@ h2 {
 	flex-direction: row;
 }
 
-/* TODO: align with .topics text */
 .subcol {
 	flex: 20%;
 }
