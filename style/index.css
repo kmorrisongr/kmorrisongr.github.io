@@ -31,7 +31,7 @@ h2 {
 	flex: 50%;
 }
 
-/* TODO: spacing is still lame on smaller browser views, unfortunately */
+/* TODO: spacing is still lame on smaller browser views */
 .topics {
 	display: flex;
 	justify-content: space-between;
